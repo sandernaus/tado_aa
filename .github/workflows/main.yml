@@ -25,5 +25,5 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ steps.commit.outputs.short }}, latest
+        tags: ${{ steps.commit.outputs.short }}
           
