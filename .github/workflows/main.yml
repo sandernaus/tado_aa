@@ -41,6 +41,6 @@ jobs:
       with:
         user: ${{ secrets.DOCKER_USERNAME }}
         pass: ${{ secrets.DOCKER_PASSWORD }}
-        slug: ${{ steps.meta.inputs.images }}
+        slug: snau/tado_aa
         readme: ./README.md
         description: true
