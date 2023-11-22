@@ -42,5 +42,5 @@ jobs:
         user: ${{ secrets.DOCKER_USERNAME }}
         pass: ${{ secrets.DOCKER_PASSWORD }}
         slug: ${{ steps.meta.inputs.images }}
-        readme: ..README.md
+        readme: ./README.md
         description: true
