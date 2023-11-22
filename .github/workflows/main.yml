@@ -35,4 +35,12 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
-          
+
+    - name: Sync README to Docker hub
+      uses: meeDamian/sync-readme@v1.0.6
+      with:
+        user: ${{ secrets.DOCKER_USERNAME }}
+        pass: ${{ secrets.DOCKER_PASSWORD }}
+        slug: ${{ steps.meta.inputs.images }}
+        readme: ..README.md
+        description: true
