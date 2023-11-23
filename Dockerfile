@@ -2,6 +2,8 @@ FROM python:3
 
 RUN pip3 install python-tado
 
+ENV PYTHONUNBUFFERED=1
+
 RUN git clone https://github.com/adrianslabu/tado_aa
 
 RUN sed -i -e 's/"your_tado_username"/os.getenv('\''your_tado_username'\'')/g' ./tado_aa/tado_aa.py && \
